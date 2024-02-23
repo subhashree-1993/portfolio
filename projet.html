@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="portfolio.css"> -->
+    <!-- font awsome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <style>
+            *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+    color: #eee;
+    font-family: Poppins;
+    font-size: 15px;
+
+
+     height:75vh ; 
+
+
+
+}
+
+mark {
+    padding: 0 8px;
+    border-radius: 10px;
+    background-image: linear-gradient(red, yellow);
+}
+
+
+
+header {
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+
+header h1 {
+    font-size: 34px;
+    width: 100%;
+    color: chartreuse;
+
+}
+    
+
+    
+
+
+.education-contant {
+    margin-top: 5%;
+}
+
+.skill-contant {
+    margin-top: 5%;
+}
+
+
+.container {
+
+
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.container .slider .item {
+    position: absolute;
+    height: 250px;
+    width: 150px;
+    top: 80%;
+     gap: 10px; 
+    transform: translate(0, -50%);
+    border-radius: 5%;
+    box-shadow: 0 10px 30px #757373;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.5s;
+     display: flex; 
+     gap: 10px; 
+
+}
+
+
+.slider .item:nth-child(1),
+.slider .item:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    width: 100%;
+    height: 100%;
+}
+
+.slider .item:nth-child(3) {
+    left: 70%;
+}
+
+.slider .item:nth-child(4) {
+    left: calc(70% + 120px)
+}
+
+.slider .item:nth-child(5) {
+    left: calc(70% + 240px)
+}
+
+.slider .item:nth-child(n + 6) {
+    left: calc(50% + 660px);
+    opacity: 0;
+
+}
+
+.item .contant {
+    position: absolute;
+    top: 35%;
+    transform: translate(0, -50%);
+    left: 100px;
+    text-align: left;
+    color: #fff;
+    width: 800px;
+    display: none;
+
+}
+
+.item:nth-child(2) .contant {
+    display: block;
+}
+
+.item .contant .name {
+    text-transform: uppercase;
+    font-size: 41px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+    line-height: 70px;
+}
+
+.item .contant .dec {
+    margin: 10px 0 10px;
+    font-size: 20px;
+    opacity: 0;
+    line-height: 30px;
+    animation: animate 1s ease-in-out 0.3s forwards;
+}
+
+.item .contant button:hover {
+    background-image: linear-gradient(145deg, aqua, green);
+    cursor: pointer;
+
+}
+
+.item .contant button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+     background: #fff; 
+    font-weight: 400;
+    font-size: 15px;
+    transition: all 0.5s;
+    opacity: 0;
+    color: white;
+    background-image: linear-gradient(145deg, green, aqua);
+
+    animation: animate 1s ease-in-out 0.6s forwards;
+
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur();
+    }
+}
+
+.buttons {
+    position: absolute;
+    width: 100%;
+    margin-left: 20%;
+    bottom: 10px;
+}
+
+.buttons button {
+    margin: 15px 15px;
+     padding: 34px; 
+     font-size: 80px; 
+    background: transparent;
+    border: none;
+    color: yellow;
+     background-image: radial-gradient(green,yellow); 
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.5s;
+     border-radius: 50%; 
+}
+
+.buttons button:hover {
+    opacity: 100;
+}
+
+.fa-solid {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.contant1 {
+     display: flex;  
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;  
+
+    margin-top: 10%;
+
+    width: 900px;
+    height: 100vh;
+
+}
+
+.dec-contant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     margin-top:20%; 
+
+}
+
+.name1 {
+     margin-top: 50%; 
+     margin-bottom: 0; 
+    text-align: center;
+    margin-top: 5%;
+}
+
+.dec1 {
+    margin-right: 10%;
+}
+
+.dec2 {
+     position: absolute; 
+     left: 100%; 
+     margin-top: 2%; 
+     margin-left: 5%; 
+     margin-right: 5%; 
+}
+
+.dec2 {
+    position: absolute;
+     margin-top: 5%; 
+    left: 0;
+    line-height: 60px;
+}
+
+.dec2 a {
+    margin-left: 5%;
+}
+
+span {
+    animation: name 1s infinite;
+    transition: color 1s;
+
+
+}
+
+@keyframes name {
+    from {
+        transform: scale(.4);
+        color: red;
+    }
+
+    to {
+        color: aqua;
+         transform: translate(-360deg); 
+    }
+
+}
+
+@media screen and (max-width:1240px) {
+    .container .slider .item .contant .name1 {
+        font-size: 23px;
+         position: absolute; 
+
+    }
+
+    .item .contant1 {
+         position: absolute;
+top: 50%;
+left: 40px;
+width: 100vh; 
+
+    }
+
+}
+
+@media screen and (max-width:350px) {
+    .item .hd-contant {
+        position: absolute;
+        top: 40%;
+        left: 20px;
+
+    }
+
+}
+
+@media screen and (max-width:869px) {
+    .item .contant1 {
+         position: absolute; 
+         top: 60%; 
+         left: 20px; 
+        width: 100vh;
+         margin-top: 10%; 
+
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .item .contant1 {
+        position: absolute;
+        top: 20%;
+        left: 70px;
+        width: 60vw;
+         margin-bottom: 5%;  
+        height: 30vh;
+
+
+    }
+
+    .dec-contant {
+        width: 60vh;
+        height: 50vh;
+    }
+
+    .name1 {
+         line-height: 5px; 
+    }
+
+    .item .contant1 .dec1 {
+        font-size: 17px;
+
+    }
+
+    .contant1 {
+        margin-top: 5%;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .skill-contant {
+         width: 50vh;
+height: 30vh; 
+        position: absolute;
+        top: 30%;
+        left: 20px;
+         bottom: 60px; 
+         position: absolute;
+top: 0;
+left: 20px; 
+        position: absolute; 
+ top: 0;
+left: 20px; 
+width: 40vw;
+height: 30vh;
+ margin-bottom: 100%; 
+         font-size: 22px; 
+         margin-top: 0; 
+height: 50vh; 
+
+    }
+
+}
+
+@media screen and (max-width:880px) {
+    .item .contant .about-dec {
+        width: 100vh;
+    }
+}
+
+@media screen and (max-width:574px) {
+    .item .contant .name {
+        font-size: 21px;
+        text-transform: uppercase;
+    }
+
+    .container {
+         margin-top: -10px; 
+        height: 100vh;
+         position: relative; 
+         text-align: left; 
+
+
+
+     transform: translate(-1%,-1%); 
+
+         margin-right: -90px; 
+         padding:  0 20px; 
+    }
+
+    .item .education-contant {
+        position: absolute;
+        top: 40%;
+        left: 20px;
+
+    }
+
+    .item .contant .dec {
+        font-size: 20px;
+        margin-bottom: 22px;
+
+    }
+
+    .item .contant .about-dec {
+        width: 50vh;
+        font-size: 18px;
+    }
+
+    .item .about-contant {
+        margin-top: 40px;
+        position: absolute;
+        top: 40%;
+        left: 20px;
+    }
+
+    .item .contant .skill p {
+         position: absolute; 
+         top: 20%; 
+         display: inline; 
+
+    }
+
+    .item .education-contant {
+        position: absolute;
+        top: 50%;
+    }
+
+    .item .education-contant .edu-dec {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width:800px) {
+    .item .skill-contant {
+        position: absolute;
+        top: 40%;
+        left: 20px;
+    }
+}
+
+@media (max-width:322px) {
+    .item .education-contant .edu-dec {
+        font-size: 15px;
+        color: white;
+         width: 70px; 
+    }
+
+    .skill-contant {
+         height: 40vh; 
+    }
+
+
+
+}
+
+@media (max-width:890px) {
+    .exp-dec {
+        width: 50vw;
+        height: 20vh;
+
+    }
+}
+
+@media (max-width:600px) {
+    .exp-dec p {
+        font-size: 18px;
+        line-height: 18px;
+         margin-bottom: 55%; 
+        margin-right: 10px;
+
+
+
+    }
+
+    .exp-dec {
+        width: 35vh;
+    }
+}
+form input{
+    padding: 12px;
+    border-radius: 7px;
+}
+textarea{
+    border-radius: 7px;
+    padding: 5px;
+}
+        </style>
+    
+</head>
+
+<body>
+
+    <header>
+
+        <h1>
+            <marquee behavior="" direction="">PORTFOLIO</marquee>
+        </h1>
+
+    </header>
+    <!-- carousall -->
+    <div class="container">
+        <div class="slider">
+            <div class="item item_cont"
+                style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Cervus_elaphus_Luc_Viatour_6.jpg/1200px-Cervus_elaphus_Luc_Viatour_6.jpg);">
+                <div class="contant contant1">
+                    <div class="name name1"><mark>Contact Me</mark>
+
+                    </div>
+                    <div class="dec dec-contant">
+
+
+                        <div class="dec2">
+                            <i class="fa-sharp fa-solid fa-location-dot" title="3rd Cross Hagadur Whitefield ,
+                                    Bangalore -560056,INDIA"></i><br>
+                            <i class="fa-solid fa-phone" title="Phone:+91-8006262548"></i>
+
+                            <br>
+
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"
+                                    style="color: white; font-size: 22px;"></i></a><br>
+                            <a href=""><i class="fa-brands fa-github"
+                                    style="color: white; font-size: 22px;"></i></a><br>
+
+                                <i class="fa-solid fa-envelope" style="color: white; font-size: 22px;"
+                                    title="Email ID:lovelyrajput1395@gmail.com"></i>
+
+                        </div>
+                        <div class="dec1">
+                            <form action="https://api.web3forms.com/submit" method="POST" target="_blank">
+                                <input type="hidden" name="access_key" value="11d7c1c8-fc19-4bbc-b4a2-86d1214b669a">
+
+
+
+
+                                <input type="text" placeholder="Enter Your Name" id="name" name="name" required
+                                    style="border-radius: 8px;">
+                                <br><br>
+
+
+
+
+                                <input type="email" id="email" name="email" placeholder="Email Id..."
+                                    required="border-radius: 8px;">
+                                <br><br>
+
+
+
+                                <textarea name="msg" id="msg" cols="" rows="4"
+                                    placeholder="Please Write Your msg here...."></textarea>
+                                <!-- <input type="text" style="border-radius: 8px;"> -->
+                                <br>
+                                <button>Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(https://cdn.wallpapersafari.com/66/24/BhLWw2.jpg);">
+                <div class="contant hd-contant">
+                    <div class="name"><mark>Front End Devloper</mark></div>
+                    <div class="dec">Hi, I'm <span>Subhashree barik </span>
+                        <br>D/o Susanta Kumar Barik <br>from Odisha
+                    </div>
+                    <a href="C:\Users\ASUS\Downloads\exprience.pdf" target="_blank"><button>Download CV</button></a>
+                </div>
+            </div>
+
+            <div class="item"
+                style="background-image: url(https://files.worldwildlife.org/wwfcmsprod/images/Blue_whale_Indian_Ocean/story_full_width/34fu5zob0a_Small_WW2154941.jpg);">
+                <div class="contant about-contant">
+                    <div class="name"><mark>About Me</mark></div>
+                    <div class="dec about-dec">Loyal with professional attitude which takes great pride in work and
+                        achieves a career progression through hard working, self-confident and have ability to work at
+                        any platform within a short period.</div>
+                    <a href="/resume.html" target="_blank"><button>Download CV</button></a>
+                </div>
+            </div>
+
+            <div class="item"
+                style="background-image: url(https://a-z-animals.com/media/2021/10/Most-Dangerous-Birds-Great-Horned-Owl-1024x535.jpg);">
+                <div class="contant education-contant">
+                    <div class="name"><mark>Education</mark></div>
+                    <div class="dec edu-dec">
+                        <p title="2014-2018">B.tech [E&TC]
+                            <br>from Biju Pattanaik University of Technology
+                        </p>
+                        <p title="2011">12th From Bhadrak autonomous</p>
+                        <p title="2009">10th From  SSVM.BBSR</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item"
+                style="background-image: url(https://www.shutterstock.com/image-photo/great-tiger-male-nature-habitat-600nw-696476371.jpg);">
+                <div class="contant skill-contant">
+                    <div class="name skill"><mark>Skill</mark></div>
+                    <div class="dec">
+                        <p>• HTML</p>
+                        <p> • CSS</p>
+                        <p>• Java Script</p>
+                        <p>• React .js</p>
+                    </div>
+                    <a href="C:\Users\ASUS\Downloads\exprience.pdf." target="_blank"><button>Download CV</button></a>
+                </div>
+            </div>
+
+            <div class="item"
+                style="background-image: url(https://images.saymedia-content.com/.image/t_share/MTg4NzIxNzgyMTA5MjUxMzA4/top-10-most-beautiful-animals-in-the-world.jpg);">
+                <div class="contant Experience-contant">
+                    <div class="name"><mark>Experience</mark></div>
+                    <div class="dec exp-dec">
+
+                        <p>I agree that I am exprience but i have a lot of Experience or hardworking and dedication </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="item"
+                style="background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg);">
+                <div class="contant">
+                    <div class="name"><mark>Project</mark></div>
+                    <div class="dec">
+                        <div class="dec1">
+                            <a href="/practice/rotatebox.html" target="_blank"><button>project1(html,css)</button>
+                            </a><br>
+                            <br>
+                            <a href="/e comerce web/web.html" target="_blank"><button>project2(html,css)</button></a>
+                            <br>
+                            <br>
+                            <a href="/CSS/taxc2.html" target="_blank"><button>project3(html,css)</button></a>
+                            <br><br>
+                            <a href="/css/improve task3.html" target="_blank"><button>project4(html,css)</button></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="buttons">
+            <button class="pre"><i class="fa-solid fa-circle-left" style="font-size: 40px;"></i></button>
+            <button class="next"><i class="fa-solid fa-circle-right" style="font-size: 40px;"></i></button>
+        </div>
+    </div>
+<script src="portfolio.js"></script>
+
+</body>
+
+</html>
